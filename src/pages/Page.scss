@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+.odds-page-main {
+  min-height: calc(100vh - 272px);
+  transition: all .6s;
+  border-left: 2px solid $gray;
+  border-top: 2px solid $gray;
+  background-color: #fafafa;
+  padding: 13px 15px 13px;
+
+  & > div {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1599px) {
+  .odds-page-main {
+
+    & > div {
+      max-width: 1530px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1919px) {
+  .odds-page-main {
+
+    & > div {
+      max-width: 1650px;
+    }
+  }
+}
+
+@media only screen and (min-width: 2559px) {
+  .odds-page-main {
+
+    & > div {
+      max-width: 2230px;
+    }
+  }
+}

@@ -1,0 +1,268 @@
+@import '../../variables.scss';
+
+.odds-sidebar {
+  max-height: calc(100vh - 272px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  float: left;
+  background-color: $very-light-gray;
+  // border-bottom: 2px solid $gray;
+  border-top: 2px solid $gray;
+  transition: all .6s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 40px;
+
+  &-subTitle {
+    transition: all 0s !important;
+  }
+
+  span {
+    white-space: nowrap;
+    color: initial;
+    transition: all .6s;
+  }
+
+  img[alt='arrow'] {
+    opacity: 1;
+    margin-left: 15px;
+    transition: all .6s;
+  }
+
+  &-open {
+    width: 270px;
+
+    .odds-sidebar-link-wrapper {
+
+      & .odds-sidebar-link-wrapper {
+        
+
+        .odds-sidebar-link {
+          padding-left: 76px;
+          margin-bottom: 4px;
+
+          &-more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $blue;
+            border-radius: 20px;
+            padding: 0 4px;
+
+            // &:hover {
+            //   background-color: $blue;
+
+            //   span {
+            //     color: $white !important;
+            //   }
+            // }
+
+            span {
+              margin-left: 4px;
+              color: $blue !important;
+            }
+
+            img {
+              margin: 0 0 0 0;
+            }
+          }
+        }
+
+        .odds-sidebar-link-sub {
+          margin-bottom: 4px;
+          
+          &:hover {
+            span {
+              color: $blue;
+            }
+          }
+
+          img {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &-close {
+    width: 64px;
+    overflow: hidden;
+
+    .odds-sidebar-link-wrapper .odds-sidebar-link {
+      margin-bottom: 19px !important;
+    }
+    
+    .odds-sidebar-link-wrapper .odds-sidebar-link-wrapper {
+      display: none;
+
+      span, img {
+        display: none;
+      }
+  
+      .odds-sidebar-link-sub {
+        margin: 0;
+        height: 0;
+      }
+    }
+
+    span {
+      overflow: hidden;
+      transition: all .6s;
+      color: transparent !important;
+    }
+
+    img[alt='arrow'] {
+      opacity: 0;
+      transition: all .6s;
+    }
+
+    img {
+      margin: 0 18px !important;
+    }
+
+
+  }
+
+  .active {
+
+    .odds-text {
+      font-weight: bold;
+      color: $blue !important;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 19px;
+    font-weight: normal;
+    height: 26px;
+    transition: all .6s;
+
+    &:hover {
+      
+      span {
+        color: $blue !important;
+      }
+    }
+
+    &-open {
+      margin-bottom: 0 !important;
+      transition: all 0s !important;
+    }
+
+    img {
+      margin: 0 16px 0 30px;
+      transition: all .6s;
+    }
+
+    &-sub {
+      display: flex;
+      align-items: center;
+      margin-left: 72px;
+      margin-bottom: 19px;
+      text-decoration: none;
+      font-size: 13px;
+      height: 26px;
+      position: relative;
+      transition: all 1s ease-in-out;
+
+      a {
+        text-decoration: none;
+      }
+
+      &-first {
+        opacity: 0.4;
+        cursor: default;
+
+        &:hover {
+
+          span {
+            color: $black !important;
+          }
+        }
+      }
+
+      &-second {
+        opacity: 0.1;
+        cursor: default;
+
+        &:hover {
+
+          span {
+            color: $black !important;
+          }
+        }
+      }
+
+      &:hover {
+        position: relative;
+
+        img[alt="star"] {
+          position: absolute;
+          right: 20px;
+          display: inherit;
+          z-index: 10;
+          cursor: pointer;
+        }
+      }
+
+      img[alt="star"] {
+        display: none;
+      }
+
+      img[alt="favorite"] {
+        position: absolute;
+        right: 20px;
+        display: inherit;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .odds-text {
+        color: $black;
+      }
+
+      span {
+        white-space: nowrap;
+        color: initial;
+        transition: all 0s;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+
+      &-close {
+        display: none;
+        overflow: hidden;
+        transition: all .6s;
+        color: transparent !important;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .odds-sidebar-link {
+        margin-bottom: 19px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and  (min-width: 1700px) {
+  .odds-sidebar {
+  }
+}

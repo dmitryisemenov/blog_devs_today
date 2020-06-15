@@ -1,0 +1,246 @@
+@import '../../variables.scss';
+
+.odds-footer {
+  background-color: #fafafa;
+  height: 94px;
+  transition: all .6s;
+
+  &-block {
+    border-top: 2px solid $gray;
+    border-left: 2px solid $gray;
+    padding: 31px 28px 20px 35px;
+    display: flex;
+    justify-content: space-between;
+
+    &-media {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 44px;
+      font-size: 13px;
+      line-height: 19px;
+
+      .odds-footer-row {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .odds-text {
+        color: $black;
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 30px;
+
+    &-media {
+      margin: 6px auto;
+
+      img {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    .odds-footerSelect {
+      padding: 4px 11px 4px 22px;
+
+      &-wrapper {
+        margin-right: 79px;
+      }
+    }
+  }
+
+  &-links {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    
+    a {
+      margin-right: 40px;
+      color: $blue;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .bottom {
+    margin-left: 100px;
+
+    span {
+      color: #4f4f4f !important;
+      letter-spacing: -0.04em;
+      margin-right: 12px;
+    }
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+
+    &-media {
+      margin-top: 12px;
+      display: flex;
+
+      &-modal {
+        position: relative;
+        display: flex;
+
+        &:hover {
+
+          div {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1px 3px;
+            font-size: 10px;
+            line-height: 12px;
+            color: $white;
+            background-color: $blue;
+            bottom: -20px;
+            left: calc(50% - 32px);
+            width: 50px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -4px;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 2px 4px 2px;
+              border-color: transparent transparent $blue transparent;
+            }
+          }
+        }
+
+        div {
+          display: none;
+        }
+      }
+
+      img {
+        margin-right: 6px;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+  }
+
+  &-center {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+
+    &-follow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-links {
+        display: flex;
+
+        a {
+          margin-right: 13px;
+          height: 25px;
+          width: 25px;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        &-fb {
+          background: url('../../images/sprite.png') -27px -237px;
+
+          &:hover {
+            background: url('../../images/sprite.png') 0 -237px;
+          }
+        }
+
+        &-twitter {
+          background: url('../../images/sprite.png') -27px -264px;
+
+          &:hover {
+            background: url('../../images/sprite.png') 0 -264px;
+          }
+        }
+
+        &-linkedin {
+          background: url('../../images/sprite.png') -27px -291px;
+
+          &:hover {
+            background: url('../../images/sprite.png') 0 -291px;
+          }
+        }
+
+        &-inst {
+          background: url('../../images/sprite.png') -27px -318px;
+
+          &:hover {
+            background: url('../../images/sprite.png') 0 -318px;
+          }
+        }
+
+        &-tube {
+          background: url('../../images/sprite.png') -27px -210px;
+
+          &:hover {
+            background: url('../../images/sprite.png') 0 -210px;
+          }
+        }
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: normal;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+
+    .odds-footerSelect {
+      display: flex;
+      align-items: center;
+      padding: 9px 19px;
+      height: 20px;
+
+      &-header {
+        width: 100%;
+      }
+
+      &-wrapper {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
